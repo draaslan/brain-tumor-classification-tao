@@ -1,0 +1,4 @@
+{"date": "8/25/2023", "time": "17:48:55", "status": "STARTED", "verbosity": "INFO", "message": "Starting Classification evaluation"}
+{"date": "8/25/2023", "time": "17:48:55", "status": "RUNNING", "verbosity": "INFO", "message": "**********************Start logging for Inference**********************."}
+{"date": "8/25/2023", "time": "17:49:2", "status": "SUCCESS", "verbosity": "INFO", "message": "Completed Evaluation."}
+{"date": "8/25/2023", "time": "17:49:3", "status": "SUCCESS", "verbosity": "INFO", "message": "Evaluation finished successfully."}

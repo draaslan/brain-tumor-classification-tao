@@ -1,0 +1,37 @@
+train:
+  exp_config:
+    manual_seed: 49
+  train_config:
+    runner:
+      max_epochs: 100
+    checkpoint_config:
+      interval: 1
+    logging:
+      interval: 500
+    validate: True
+    evaluation:
+      interval: 1
+dataset:
+  data:
+    samples_per_gpu: 32
+    train:
+      data_prefix: /tao-workspace/brain-tumor-classification/dataset/Training/
+      pipeline: 
+        - type: RandomResizedCrop
+          size: 224
+      classes: /tao-workspace/brain-tumor-classification/classes.txt
+    val:
+      data_prefix: /tao-workspace/brain-tumor-classification/dataset/Testing/
+      classes: /tao-workspace/brain-tumor-classification/classes.txt
+    test:
+      data_prefix: /tao-workspace/brain-tumor-classification/dataset/Testing/
+      classes: /tao-workspace/brain-tumor-classification/classes.txt
+model:
+  backbone:
+    type: "fan_tiny_8_p4_hybrid"
+    custom_args:
+      drop_path: 0.1
+  head:
+    num_classes: 4
+    loss:
+      type: "CrossEntropyLoss"
