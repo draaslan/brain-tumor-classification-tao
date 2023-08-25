@@ -1,0 +1,54 @@
+2023-08-25 17:07:43,113 - mmcls - INFO - **********************Start logging for Training**********************
+2023-08-25 17:07:44,025 - mmcls - INFO - Start running, host: root@e50b7d75d2c1, work_dir: /tao-workspace/brain-tumor-classification/experiments/train
+2023-08-25 17:07:44,025 - mmcls - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) CosineAnnealingLrUpdaterHook       
+(NORMAL      ) CheckpointHook                     
+(LOW         ) DistEvalHook                       
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) CosineAnnealingLrUpdaterHook       
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(LOW         ) DistEvalHook                       
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) CosineAnnealingLrUpdaterHook       
+(LOW         ) IterTimerHook                      
+(LOW         ) DistEvalHook                       
+ -------------------- 
+after_train_iter:
+(ABOVE_NORMAL) DistOptimizerHook                  
+(NORMAL      ) CheckpointHook                     
+(LOW         ) IterTimerHook                      
+(LOW         ) DistEvalHook                       
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) DistEvalHook                       
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+after_run:
+(VERY_LOW    ) MMClsTaoTextLoggerHook             
+ -------------------- 
+2023-08-25 17:07:44,025 - mmcls - INFO - workflow: [('train', 1)], max: 100 epochs
+2023-08-25 17:07:44,025 - mmcls - INFO - Checkpoints will be saved to /tao-workspace/brain-tumor-classification/experiments/train by HardDiskBackend.
+2023-08-25 17:08:09,477 - mmcls - INFO - Saving checkpoint at 1 epochs
+2023-08-25 17:08:15,491 - mmcls - INFO - Epoch(val) [1][13]	accuracy_top-1: 28.4264
